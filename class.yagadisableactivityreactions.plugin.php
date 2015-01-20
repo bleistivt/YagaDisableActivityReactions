@@ -3,7 +3,7 @@
 $PluginInfo['YagaDisableActivityReactions'] = array(
     'Name' => 'Yaga Disable Activity Reactions',
     'Description' => 'Turns off reactions for activities.',
-    'Version' => '0.1',
+    'Version' => '0.2',
     'RequiredApplications' => array('Yaga' => '1.0'),
     'MobileFriendly' => true,
     'Author' => 'Bleistivt',
@@ -30,6 +30,7 @@ class YagaDisableActivityReactionsPlugin extends Gdn_Plugin {
             'ParentType' => 'activity',
             'ParentID' => $Args['ParentID']
         ), 1);
+        Yaga::GivePoints($Args['ParentUserID'], -1 * $Args['Points'], 'Reaction');
     }
 
 }
