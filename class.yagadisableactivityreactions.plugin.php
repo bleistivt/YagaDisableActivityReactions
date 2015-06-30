@@ -24,6 +24,10 @@ class YagaDisableActivityReactionsPlugin extends Gdn_Plugin {
         }
     }
 
+    public function profileController_initialize_handler($sender) {
+        $this->activityController_initialize_handler($sender);
+    }
+
     public function reactionModel_afterReactionSave_handler($sender, $args) {
         if ($args['ParentType'] == 'activity'){
             throw permissionException();
