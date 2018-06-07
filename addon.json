@@ -1,7 +1,7 @@
 {
     "name": "Yaga Disable Activity Reactions",
     "description": "Turns off reactions for activities.",
-    "version": "0.4",
+    "version": "0.5",
     "mobileFriendly": true,
     "license": "GNU GPL2",
     "gitHub": "bleistivt/YagaDisableActivityReactions",
@@ -12,8 +12,5 @@
             "name": "Bleistivt",
             "homepage": "http://bleistivt.net"
         }
-    ],
-    "require": {
-        "yaga": ">=1.0"
-    }
+    ]
 }
